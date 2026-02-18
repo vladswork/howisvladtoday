@@ -21,7 +21,7 @@ with DAG(
     default_args=default_args,
     description="Sync Strava activities to PostgreSQL",
     # Run at 8:00 AM UTC every Monday and Thursday
-    schedule_interval="0 8 * * 1,4",
+    schedule_interval="0 8 * * 1,5",
     start_date=datetime(2026, 2, 18),
     catchup=False,
     tags=["strava"],
