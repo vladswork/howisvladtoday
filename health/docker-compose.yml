@@ -22,8 +22,8 @@ x-airflow-common: &airflow-common
   volumes:
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/logs:/opt/airflow/logs
-    - ./strava:/opt/airflow/strava
-    - ./sync.py:/opt/airflow/sync.py
+    - ./strava:/opt/airflow/health/strava
+    - ./sync.py:/opt/airflow/health/sync.py
   extra_hosts:
     - "host.docker.internal:host-gateway"
 

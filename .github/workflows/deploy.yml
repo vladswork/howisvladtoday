@@ -18,10 +18,14 @@ jobs:
             cd ~/strava-dashboard
             git pull origin main
 
-            # Restart API if backend changed
+            # Sync static site files
+            sudo rsync -av --delete site/ /var/www/howisvlad.today/
+
+            # Restart API
             sudo systemctl restart strava-api
 
-            # Update dashboard files
-            sudo cp -f /home/vladimir/strava-dashboard/dashboard/index.html /var/www/howisvlad.today/health/index.html 2>/dev/null || true
+            # Restart Airflow if docker-compose changed
+            cd health
+            docker compose --env-file /home/vladimir/strava-dashboard/.env up -d
 
-            echo "Deploy complete at $(date)"
+            echo "Deployed at $(date)"

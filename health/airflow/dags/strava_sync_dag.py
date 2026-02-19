@@ -6,7 +6,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 # Add the parent directory so we can import our sync module
-sys.path.insert(0, "/opt/airflow")
+sys.path.insert(0, "/opt/airflow/health")
 
 default_args = {
     "owner": "vladimir",
