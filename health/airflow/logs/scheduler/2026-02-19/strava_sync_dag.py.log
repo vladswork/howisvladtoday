@@ -10722,3 +10722,122 @@
 [2026-02-19T13:04:40.059+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:04:40.059+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-02-19T13:04:40.093+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:04:40.093+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
 [2026-02-19T13:04:40.121+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.141 seconds
+[2026-02-19T13:05:10.262+0000] {processor.py:186} INFO - Started process (PID=201) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:10.263+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:05:10.266+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:10.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:10.280+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:10.322+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:10.322+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:05:10.361+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:10.360+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:05:10.386+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.131 seconds
+[2026-02-19T13:05:40.617+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:40.620+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:05:40.624+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:40.623+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:40.637+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:05:40.681+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:40.681+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:05:40.718+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:05:40.718+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:05:40.749+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.147 seconds
+[2026-02-19T13:06:10.865+0000] {processor.py:186} INFO - Started process (PID=211) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:10.867+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:06:10.869+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:10.869+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:10.884+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:10.929+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:10.929+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:06:10.964+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:10.964+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:06:10.992+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.133 seconds
+[2026-02-19T13:06:41.261+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:41.263+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:06:41.267+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:41.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:41.286+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:06:41.335+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:41.335+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:06:41.369+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:06:41.369+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:06:41.398+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.144 seconds
+[2026-02-19T13:07:11.516+0000] {processor.py:186} INFO - Started process (PID=221) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:11.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:07:11.524+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:11.524+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:11.538+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:11.581+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:11.581+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:07:11.614+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:11.614+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:07:11.640+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.131 seconds
+[2026-02-19T13:07:41.907+0000] {processor.py:186} INFO - Started process (PID=226) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:41.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:07:41.912+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:41.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:41.925+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:07:41.969+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:41.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:07:42.005+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:07:42.005+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:07:42.038+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.140 seconds
+[2026-02-19T13:08:12.153+0000] {processor.py:186} INFO - Started process (PID=231) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:12.155+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:08:12.159+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:12.159+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:12.173+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:12.224+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:12.224+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:08:12.261+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:12.260+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:08:12.293+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.148 seconds
+[2026-02-19T13:08:42.564+0000] {processor.py:186} INFO - Started process (PID=236) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:42.565+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:08:42.569+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:42.568+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:42.581+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:08:42.628+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:42.628+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:08:42.665+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:08:42.664+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:08:42.691+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.139 seconds
+[2026-02-19T13:09:12.824+0000] {processor.py:186} INFO - Started process (PID=241) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:12.826+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:09:12.829+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:12.829+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:12.849+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:12.904+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:12.903+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:09:12.942+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:12.941+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:09:12.970+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.154 seconds
+[2026-02-19T13:09:43.219+0000] {processor.py:186} INFO - Started process (PID=246) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:43.220+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:09:43.223+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:43.222+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:43.237+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:09:43.290+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:43.289+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:09:43.322+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:09:43.321+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:09:43.348+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.137 seconds
+[2026-02-19T13:10:13.480+0000] {processor.py:186} INFO - Started process (PID=251) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:13.481+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:10:13.485+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:13.484+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:13.500+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:13.545+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:13.545+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:10:13.582+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:13.582+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:10:13.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.138 seconds
+[2026-02-19T13:10:43.849+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:43.851+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:10:43.854+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:43.853+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:43.868+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:10:43.915+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:43.914+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:10:43.949+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:10:43.948+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:10:43.979+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.143 seconds
+[2026-02-19T13:11:14.106+0000] {processor.py:186} INFO - Started process (PID=261) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:14.107+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:11:14.110+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:14.110+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:14.125+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:14.173+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:14.172+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:11:14.209+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:14.209+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:11:14.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.144 seconds
+[2026-02-19T13:11:44.490+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:44.491+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:11:44.494+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:44.494+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:44.508+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:11:44.552+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:44.552+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:11:44.584+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:11:44.584+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:11:44.610+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.129 seconds
+[2026-02-19T13:12:14.768+0000] {processor.py:186} INFO - Started process (PID=271) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:14.769+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:12:14.772+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:14.772+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:14.785+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:14.830+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:14.830+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:12:14.867+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:14.866+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:12:14.898+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.137 seconds
+[2026-02-19T13:12:45.135+0000] {processor.py:186} INFO - Started process (PID=276) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:45.137+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:12:45.141+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:45.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:45.154+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:12:45.202+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:45.202+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:12:45.240+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:12:45.240+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:12:45.273+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.145 seconds
+[2026-02-19T13:13:15.396+0000] {processor.py:186} INFO - Started process (PID=281) to work on /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:13:15.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/strava_sync_dag.py for tasks to queue
+[2026-02-19T13:13:15.401+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:13:15.400+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:13:15.415+0000] {processor.py:925} INFO - DAG(s) 'strava_sync' retrieved from /opt/airflow/dags/strava_sync_dag.py
+[2026-02-19T13:13:15.459+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:13:15.459+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-19T13:13:15.491+0000] {logging_mixin.py:190} INFO - [2026-02-19T13:13:15.491+0000] {dag.py:4180} INFO - Setting next_dagrun for strava_sync to 2026-02-20 08:00:00+00:00, run_after=2026-02-23 08:00:00+00:00
+[2026-02-19T13:13:15.518+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/strava_sync_dag.py took 0.129 seconds

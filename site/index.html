@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>howisvlad.today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #08090c;
+            --surface: #111318;
+            --surface-hover: #181b23;
+            --border: #1e2130;
+            --border-glow: #2a2f45;
+            --text: #e8eaf0;
+            --text-muted: #6b7194;
+            --text-dim: #3d4260;
+            --accent: #ff6b4a;
+            --accent-glow: rgba(255, 107, 74, 0.12);
+            --green: #34d399;
+            --green-glow: rgba(52, 211, 153, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grain texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Ambient glow */
+        .glow-orb {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-orb.one { top: -200px; right: -100px; background: var(--accent); }
+        .glow-orb.two { bottom: -300px; left: -200px; background: #4e6ecf; }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 3.5rem;
+        }
+
+        .status-line {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--green);
+            background: var(--green-glow);
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.2rem;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 .accent {
+            color: var(--accent);
+        }
+
+        .header .bio {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 540px;
+            font-weight: 300;
+        }
+
+        /* Section grid */
+        .sections {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .section-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.3rem 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, transparent 60%, var(--accent-glow));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .section-card:hover {
+            border-color: var(--border-glow);
+            background: var(--surface-hover);
+            transform: translateY(-2px);
+        }
+
+        .section-card:hover::before {
+            opacity: 1;
+        }
+
+        .section-card.disabled {
+            opacity: 0.45;
+            cursor: default;
+        }
+
+        .section-card.disabled:hover {
+            transform: none;
+            border-color: var(--border);
+            background: var(--surface);
+        }
+
+        .section-card.disabled:hover::before {
+            opacity: 0;
+        }
+
+        .section-left {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-icon {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .section-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .section-right {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            padding: 0.25rem 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        .section-tag.live {
+            color: var(--green);
+            border-color: rgba(52, 211, 153, 0.25);
+        }
+
+        .section-arrow {
+            color: var(--text-dim);
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .section-card:hover .section-arrow {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+
+        /* Now playing / current status bar */
+        .now-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.85rem;
+        }
+
+        .now-bar .now-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+
+        .now-bar .now-content {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .now-bar .now-divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 3.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-left {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container { padding: 2.5rem 1.2rem; }
+            .header h1 { font-size: 2.2rem; }
+            .now-bar { flex-wrap: wrap; gap: 0.5rem; }
+            .now-bar .now-divider { display: none; }
+        }
+
+        /* Load animation */
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header, .now-bar, .section-card, .footer {
+            animation: fadeSlideUp 0.6s ease-out both;
+        }
+        .header { animation-delay: 0.05s; }
+        .now-bar { animation-delay: 0.12s; }
+        .section-card:nth-child(1) { animation-delay: 0.18s; }
+        .section-card:nth-child(2) { animation-delay: 0.24s; }
+        .section-card:nth-child(3) { animation-delay: 0.30s; }
+        .section-card:nth-child(4) { animation-delay: 0.36s; }
+        .section-card:nth-child(5) { animation-delay: 0.42s; }
+        .footer { animation-delay: 0.48s; }
+    </style>
+</head>
+<body>
+    <div class="glow-orb one"></div>
+    <div class="glow-orb two"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="status-line">
+                <span class="status-dot"></span>
+                all systems operational
+            </div>
+            <h1>How is <span class="accent">Vlad</span> today?</h1>
+            <p class="bio">
+                Data engineer from Belgrade. Runner, reader, builder of things.
+                This is my public life dashboard — a living snapshot of what
+                I'm up to, where I've been, and what's keeping me busy.
+            </p>
+        </div>
+
+        <div class="now-bar">
+            <span class="now-label">Now</span>
+            <span class="now-divider"></span>
+            <span class="now-content">📍 Belgrade, Serbia</span>
+            <span class="now-divider"></span>
+            <span class="now-content">🏃 Training for marathon season</span>
+        </div>
+
+        <div class="sections">
+            <a href="/health/" class="section-card">
+                <div class="section-left">
+                    <div class="section-icon">🏃</div>
+                    <div class="section-title">Health & Fitness</div>
+                    <div class="section-desc">Running stats, workout logs, and activity trends from Strava</div>
+                </div>
+                <div class="section-right">
+                    <span class="section-tag live">live</span>
+                    <span class="section-arrow">→</span>
+                </div>
+            </a>
+
+            <div class="section-card disabled">
+                <div class="section-left">
+                    <div class="section-icon">🌍</div>
+                    <div class="section-title">Travel</div>
+                    <div class="section-desc">Where I've been and where I'm heading next</div>
+                </div>
+                <div class="section-right">
+                    <span class="section-tag">soon</span>
+                </div>
+            </div>
+
+            <div class="section-card disabled">
+                <div class="section-left">
+                    <div class="section-icon">📚</div>
+                    <div class="section-title">Reading</div>
+                    <div class="section-desc">Books I'm reading, finished, and want to read</div>
+                </div>
+                <div class="section-right">
+                    <span class="section-tag">soon</span>
+                </div>
+            </div>
+
+            <div class="section-card disabled">
+                <div class="section-left">
+                    <div class="section-icon">📸</div>
+                    <div class="section-title">Photos</div>
+                    <div class="section-desc">Latest snapshots from Instagram</div>
+                </div>
+                <div class="section-right">
+                    <span class="section-tag">soon</span>
+                </div>
+            </div>
+
+            <div class="section-card disabled">
+                <div class="section-left">
+                    <div class="section-icon">💻</div>
+                    <div class="section-title">Projects</div>
+                    <div class="section-desc">What I'm building and tinkering with</div>
+                </div>
+                <div class="section-right">
+                    <span class="section-tag">soon</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-left">howisvlad.today — built from scratch</div>
+            <div class="footer-links">
+                <a href="https://www.strava.com/athletes/115434141" target="_blank">Strava</a>
+                <a href="https://github.com/vladswork" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
