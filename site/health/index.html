@@ -480,8 +480,9 @@
 
             const parseDate = d => new Date(d.start_date_local);
 
+            const [dateMin, dateMax] = d3.extent(filtered, parseDate);
             const x = d3.scaleTime()
-                .domain(d3.extent(filtered, parseDate))
+                .domain([dateMin, dateMax])
                 .range([margin.left, width - margin.right]);
 
             const paces = filtered.map(d => +d.pace_min_per_km).filter(p => p > 0 && p < 15);
@@ -489,10 +490,15 @@
                 .domain([d3.max(paces) * 1.05, d3.min(paces) * 0.95])
                 .range([height - margin.bottom, margin.top]);
 
-            // Axes
+            // Axes — include first month even if data starts mid-month
+            const monthTicks = d3.timeMonth.range(d3.timeMonth.floor(dateMin), dateMax);
+            if (monthTicks.length === 0 || monthTicks[0] > dateMin) {
+                monthTicks.unshift(d3.timeMonth.floor(dateMin));
+            }
+
             svg.append('g')
                 .attr('transform', `translate(0,${height - margin.bottom})`)
-                .call(d3.axisBottom(x).ticks(d3.timeMonth.every(1)).tickFormat(d3.timeFormat('%b %Y')))
+                .call(d3.axisBottom(x).tickValues(monthTicks).tickFormat(d3.timeFormat('%b %Y')))
                 .call(g => g.select('.domain').attr('stroke', '#2a2d3a'))
                 .call(g => g.selectAll('.tick text').attr('fill', '#8b8fa3').attr('font-size', '10'))
                 .call(g => g.selectAll('.tick line').attr('stroke', '#2a2d3a'));
