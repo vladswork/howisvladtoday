@@ -157,7 +157,7 @@ def get_pace(
                     start_date_local,
                     ROUND(distance::numeric / 1000, 2) as distance_km,
                     moving_time,
-                    ROUND((moving_time::numeric / 60) / NULLIF(distance / 1000, 0), 2) as pace_min_per_km,
+                    ROUND((moving_time::numeric / 60) / NULLIF(distance::numeric / 1000, 0), 2) as pace_min_per_km,
                     average_heartrate,
                     total_elevation_gain
                 FROM activities

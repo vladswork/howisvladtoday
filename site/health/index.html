@@ -583,7 +583,7 @@
             const startDate = new Date(yr, 0, 1);
             const endDate = new Date(yr, 11, 31);
 
-            const weeks = d3.timeWeek.count(d3.timeYear(startDate), endDate) + 1;
+            const weeks = d3.timeMonday.count(d3.timeYear(startDate), endDate) + 1;
             const width = margin.left + weeks * totalCell + margin.right;
             const height = margin.top + 7 * totalCell + margin.bottom;
 
@@ -615,7 +615,7 @@
             svg.selectAll('.monthLabel')
                 .data(months)
                 .join('text')
-                .attr('x', d => margin.left + d3.timeWeek.count(d3.timeYear(d), d) * totalCell)
+                .attr('x', d => margin.left + d3.timeMonday.count(d3.timeYear(d), d) * totalCell)
                 .attr('y', margin.top - 5)
                 .attr('fill', '#8b8fa3')
                 .attr('font-size', '10')
@@ -628,7 +628,7 @@
                 .data(allDays)
                 .join('rect')
                 .attr('class', 'calendar-cell')
-                .attr('x', d => margin.left + d3.timeWeek.count(d3.timeYear(d), d) * totalCell)
+                .attr('x', d => margin.left + d3.timeMonday.count(d3.timeYear(d), d) * totalCell)
                 .attr('y', d => margin.top + ((d.getDay() + 6) % 7) * totalCell)
                 .attr('width', cellSize)
                 .attr('height', cellSize)
