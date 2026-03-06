@@ -492,7 +492,7 @@
             // Axes
             svg.append('g')
                 .attr('transform', `translate(0,${height - margin.bottom})`)
-                .call(d3.axisBottom(x).ticks(width < 500 ? 4 : 8).tickFormat(d3.timeFormat('%b %Y')))
+                .call(d3.axisBottom(x).ticks(d3.timeMonth.every(1)).tickFormat(d3.timeFormat('%b %Y')))
                 .call(g => g.select('.domain').attr('stroke', '#2a2d3a'))
                 .call(g => g.selectAll('.tick text').attr('fill', '#8b8fa3').attr('font-size', '10'))
                 .call(g => g.selectAll('.tick line').attr('stroke', '#2a2d3a'));
